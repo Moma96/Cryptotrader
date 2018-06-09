@@ -1,0 +1,1088 @@
+@import "bootstrap.min.css";
+
+*{
+    outline: none!important;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus{
+    outline: none!important;
+}
+
+.row{
+    margin: 0;
+}
+
+body {
+    background-color: #f2f7fa;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.boxed-content{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header-container{
+    height:75px;
+    width: 100%;
+    background-color: #022b4b;
+    margin-bottom: 43px;
+}
+
+.header{
+    height:75px;
+    display:flex;
+    align-items: center;
+}
+
+.header-left, .header-right{
+    display:inline-flex;
+    align-items: center;
+}
+
+.header-right{
+    justify-content: flex-end;
+}
+
+.header-logo-container{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 58px;
+}
+
+.header-logo{
+    display:inline-flex;
+    align-items: center;
+}
+
+.logo-svg{
+    height: 21px;
+    width: auto;
+}
+
+.logo-path{
+    fill: #fff;;
+}
+
+.header-nav{
+    display:inline;
+}
+
+.header-nav-item{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.header-nav-item:last-child{
+    margin-right: 0;
+}
+
+.header-nav-item:hover{
+    text-decoration: none;
+    color:#fff;
+    border-top: 1px solid #fff;
+}
+
+.deposit-btn{
+    height:43px;
+    padding: 0 17px;
+    background-color: #0e5388;
+    border-radius: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deposit-btn:hover{
+    opacity: 0.9;
+}
+
+.deposit-btn-link{
+    margin-right: 12px;
+}
+
+.download-icon-svg{
+    height:15px;
+    width:12px;
+    margin-right: 11px;
+}
+
+.download-icon{
+    fill: #fff;
+}
+
+.withdraw-svg{
+    height: 15px;
+    width: auto;
+    margin-right: 11px;
+}
+
+.withdraw-icon{
+    fill: #fff;
+}
+
+.header-btn-text{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.trade-btn{
+    background-color: #f7731b;
+    border-radius: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    padding: 0 17px;
+    margin-right: 58px;
+}
+
+.trade-btn:hover{
+    opacity: 0.9;
+}
+
+.trade-svg{
+    width:20px;
+    height:14px;
+}
+
+.trade-icon{
+    fill: #fff;
+}
+
+.trade-btn-link:hover{
+    text-decoration: none;
+}
+
+.triangle-svg{
+    width: 10px;
+    height: 5px;
+    transform: translate(0, -2px)
+}
+
+.triangle-icon{
+    fill: #78b9f5;
+}
+
+.acc-name{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-right: 7px;
+}
+
+.signout-btn{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 59px;
+}
+
+.signout-btn:hover .signout-icon{
+    fill: #fff;
+}
+
+.signout-svg{
+    height:18px;
+    width: 18px;
+}
+
+.signout-icon{
+    fill: #78b9f5;
+}
+
+.currency-img{
+    margin-right: 14px;
+    height: 34px;
+    width: auto;
+}
+
+.currency-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #1576d0;
+    margin-right: 5px;
+}
+
+.arr-down-svg{
+    width:13px;
+    height: 8px;
+}
+
+.arr-down-icon{
+    fill: #1576d0;
+}
+
+.currency-container{
+    display:inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.currency-switch{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#currency-2{
+    margin-left: 10px;
+}
+
+.arr-right-svg{
+    width:18px;
+    height:12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.arr-right-icon{
+    fill: #d8e3ee;
+}
+
+.stats-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #6c8fac;
+}
+
+.change{
+    display:inline-block;
+    margin-right: 30px;
+}
+
+.change:last-child{
+    margin-right: 0;
+}
+
+.value{
+    display:inline-flex;
+    align-items: center;
+}
+
+.value-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.change-value-text{
+     color: #3ce057;
+}
+
+.chart{
+    width:100%;
+    height: 400px;
+}
+
+canvas{
+    height: 100%!important;
+    width: 100%!important;
+}
+
+.changes-container{
+    margin-bottom: 30px;
+    display:inline-flex;
+    align-items: center;
+}
+
+.changes-wrapper{
+    display:inline-flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.time-span{
+    display:inline-block;
+    transform: translate(-12px, 0);
+}
+
+.time-span select{
+    padding: 10px;
+}
+
+.white-background{
+    display:inline-block;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 100%;
+    padding: 20px 0px 20px 40px;
+}
+
+.currency-row{
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.current-value-text{
+    color: #1576d0;
+}
+
+.trade-logo-container{
+    display:inline;
+    margin-right: 14px;
+}
+
+.trade-logo{
+    width: 35px;
+    height: auto;
+}
+
+.trade-currency{
+    display:inline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    color: #1576d0;
+    font-weight: bold;
+}
+
+.trade-body .changes-container{
+    margin-bottom: 0;
+}
+
+.currency-info-row{
+    margin-bottom: 30px;
+}
+
+.buy-box, .sell-box{
+    display:inline-block;
+    max-width: 45%;
+    padding: 20px 40px;
+    height: 350px;
+}
+
+.buy-box{
+    margin-right: 15px;
+}
+
+.buy-title{
+    font-size: 22px;
+    color: #3ce057;
+    margin-bottom: 15px;
+}
+
+.sell-title{
+    font-size: 22px;
+    color: #ea3636;
+    margin-bottom: 15px;
+}
+
+.buy-input, .sell-input{
+    background-color: transparent;
+    border: none;
+}
+
+.price-box, .quantity-box{
+    background-color: #f2f7fa;
+    display:inline-flex;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width:100%;
+    margin-bottom: 20px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-box{
+    margin-bottom: 15px;
+}
+
+.buy-currency-name-price{
+    cursor: default;
+}
+
+.available-text{
+    font-size: 14px;
+    color: #6c8fac;
+    margin-bottom: 30px;
+}
+
+.available-amount{
+    color: #000;
+}
+
+.buy-btn{
+    border: none;
+    background-color: #3ce057;
+    color: #fff;
+    border-radius: 3px;
+    cursor:pointer;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.sell-btn{
+    border:none;
+    background-color: #ea3636;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.buy-btn:hover, .sell-btn:hover{
+    opacity: 0.8;
+}
+
+.ask-bid-container{
+    display:inline-block;
+    padding: 20px 70px 5px 70px;
+    width: 100%;
+}
+
+.ask-bid-title{
+    width: 100%;
+    text-align: center;
+}
+
+.price-header, .quantity-header{
+    display:inline-block;
+    font-size: 14px;
+}
+
+.price-header{
+    margin-right: 20px;
+}
+
+.price-quantity-header, .price-quantity-values{
+    display:flex;
+    justify-content: space-between;
+}
+
+.price-val, .quantity-val{
+    font-size: 13px;
+}
+
+.ask-container{
+    margin-bottom: 5px;
+}
+
+.ask-container .price-val{
+    color: #ea3636;
+}
+
+.bid-container .price-val{
+    color: #3ce057;
+}
+
+.ask-bid-background{
+    padding: 0;
+    height: 350px;
+}
+
+.price-quantity-values:hover{
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+
+.chart-background{
+    padding: 20px 40px;
+}
+
+.login-btn, .register-btn{
+    display:inline-block;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+}
+
+.login-btn{
+    margin-right: 12px;
+}
+
+.login-btn:hover, .register-btn:hover{
+    opacity: 0.9;
+}
+
+.user-svg{
+    width:18px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.user-icon{
+    fill: #fff;
+}
+
+.header-acc{
+    display:inline-flex;
+    align-items: center;
+    position:relative;
+    cursor:pointer;
+}
+
+.login-container{
+    position:fixed;
+    background-color: rgba(0,0,0,0.4);
+    width:100vw;
+    height:100vh;
+    z-index: 1;
+    display:none;
+}
+
+.login-box{
+    text-align: center;
+    position:absolute;
+    right:15px;
+    top: 100px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.login-box input {
+    float: right;
+    border-radius: 5px;
+    border: 1px solid #707070;
+}
+
+.login-boxed{
+    position: relative;
+}
+
+.form-user, .form-psw{
+    margin-bottom: 10px;
+}
+
+.login-box label{
+    margin-right: 15px;
+    color: #707070;
+}
+
+.login-submit{
+    border-radius: 5px;
+    background-color: #6c8fac;
+    border: none;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    float:none;
+    color: #fff;
+    padding: 2px 10px;
+    width: auto;
+}
+
+.login-submit:hover .login-submit-svg{
+    transform: translate(5px, 0px);
+}
+
+.login-submit-svg{
+    height:14px;
+    width: auto;
+    margin-left: 10px;
+    transition: transform ease-in .3s
+}
+
+.login-submit-icon{
+    fill: #fff;
+}
+
+.transactions-container{
+    padding: 10px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.transactions-table{
+    width: 100%;
+    overflow-y: auto;
+}
+
+.transactions-table th{
+    padding-left: 5px;
+}
+
+.transactions-table th{
+    font-size: 18px;
+}
+
+.transactions-table tr:nth-child(2n){
+    background-color: #fafafa;
+}
+
+.transactions-table td{
+    padding: 10px 80px 10px 5px;
+    font-size: 15px;
+}
+
+.transaction-ask{
+    color: #3ce057;
+}
+
+.transaction-bid{
+    color: #ea3636;
+}
+
+.cancel-order{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cancel-order:hover{
+    opacity: 0.8;
+}
+
+.register-input[type=text], .register-input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.register-input[type=text]:focus, .register-input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.signup-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.9;
+}
+
+.signup-btn:hover {
+    opacity:1;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+.register-form {
+    background-color: #fefefe;
+    margin: 5% auto 5% auto; 
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%; 
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.register-form-container{
+    height: auto;
+}
+
+.login-form{
+    text-align: left;
+}
+
+.profile-btn{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    width: auto;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.profile-menu{
+    background-color: #0e5388; 
+    position:absolute;
+    top: 100%;
+    min-width: 160px;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 5px;
+    display:none;
+}
+
+.profile-menu-item{
+    font-size: 13px;
+    width: auto;
+    color: #fff;
+    display:inline-block;
+}
+
+.profile-menu-item:hover{
+    color: #78b9f5;
+    text-decoration: none;
+}
+
+.header-acc:hover .profile-menu{
+    display:block;
+}
+
+.wallet-table{
+    width: 100%;
+}
+
+.wallet-table th{
+    font-size: 18px;
+}
+
+.wallet-table tr:nth-child(2n){
+    background-color: #fafafa;
+}
+
+.wallet-container{
+    padding: 10px;
+}
+
+.deposit-container{
+    padding: 10px;
+}
+
+.deposit-field-label{
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+.deposit-fields-row{
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.deposit-currency-img{
+    height:22px;
+    width: auto;
+    margin-right: 7px;
+}
+
+.deposit-currency-dropdown{
+    display:inline-flex;
+    align-items: center;
+    position:relative;
+}
+
+.deposit-field-text{
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.deposit-triangle-svg{
+    height: 8px;
+    width: auto;
+}
+
+.deposit-triangle-icon{
+    fill: #0e5388;
+}
+
+.deposit-change-currency-btn{
+    background-color: transparent;
+    border: none;
+    cursor:pointer;
+    display:inline-flex;
+    align-items: center;
+}
+
+.deposit-currency-text{
+    color: #0e5388;
+    font-weight: bold;
+}
+
+.deposit-dropdown-currencies{
+    margin-top: 15px;
+    position:absolute;
+    top: 100%;
+    background-color: #fafafa;
+    border-radius: 5px;
+    min-width: 100px;
+    padding: 5px;
+    display:none;
+}
+
+.deposit-dropdown-row{
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+.deposit-dropdown-row:hover{
+    opacity:0.8;
+}
+
+.currency-img-container{
+    width: 30px;
+    display:inline-flex;
+    justify-content: center;
+}
+
+.deposit-amount-input, .withdraw-amount-input{
+    border: 1px solid #707070;
+    border-radius: 3px;
+}
+
+.withdraw-amount-input{
+    margin-right: 15px;
+}
+
+.withdraw-available-label{
+    font-size: 14px;
+    color: #a1a1a1;
+    margin-right: 5px;
+}
+
+.withdraw-available-amount{
+    font-size: 14px;
+    color: #000;
+}
+
+.add-currency-box{
+    padding: 20px;
+}
+
+.add-remove-title{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.add-remove-input-box{
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    margin: 0 auto 20px auto;
+}
+
+.add-currency-input, .remove-currency-input{
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.currency-switch-box-second, .currency-switch-box-first{
+    display:inline;
+    position:relative;
+}
+
+#currency-search-first, #currency-search-second{
+    position:absolute;
+    top: 100%;
+    left:0;
+    display:none;
+}
+
+.currency-search-input-first{
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.profile-info{
+    font-weight: 600;
+}
+
+.wallet-svg{
+    height: 50px;
+    width: auto;
+}
+
+.wallet-icon{
+    fill: #1576d0;
+}
+
+.wallet-value-num{
+    color: #1576d0;
+}
+
+.total-value-box{
+    height: 120px;
+    font-size: 40px;
+}
+
+.profile-box{
+    height: 120px;
+}
+
+.submit-btn{
+    background-color: #6c8fac;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display:block;
+    margin-top: 20px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    opacity: 0.8;
+}
+
+.currency-btn{
+    margin: 0 auto;
+}
+
+.news-content{
+    display: inline-flex;
+}
+
+.news-container{
+    display:flex;
+}
+
+.carbon-top-ad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 71px;
+    border-radius: 5px;
+    background-color: #fbfbfc;
+    margin: 38px auto 74px auto;
+    max-width: 1270px;
+    padding: 50px 0;
+}
+
+.azure-square{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0466de;
+    width:42px;
+    height:42px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.carbon-top-title{
+    font-family: 'Heebo', sans-serif;
+    font-size: 24px;
+    color: #3f4346;
+    margin-right: 16px;
+}
+
+.carbon-top-text{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: #95a5ae;
+    margin-right: 13px;
+}
+
+.sponsored-box{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    height:24px;
+    width:97px;
+    border: 1px solid #0466de;
+    border-radius: 5px;
+}
+
+.sponsored-txt{
+    font-family: 'Heebo', sans-serif;
+    font-size: 11px;
+    color: #0466de;
+}
+
+.footer{
+    height:80px;
+    width: 100%;
+    background-color: #747474;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    bottom: 0;
+}
+
+.register-body .footer{
+    bottom: auto;
+}
+
+.footer-text{
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.alert {
+    top: 75px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    left: 30%;
+    width: 30%;
+    z-index: 1;
+    padding: 15px;
+}
+
+​.alert-closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.alert-closebtn:hover {
+    color: black;
+}
