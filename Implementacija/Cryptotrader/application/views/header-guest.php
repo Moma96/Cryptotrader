@@ -1,7 +1,7 @@
 <div id="login-window" class="login-container">
                 <div class="boxed-content login-boxed">
                 <div class="login-box">
-                    <form method="post" action="<?php echo base_url(); ?>login">
+                    <form method="post" action="<?php echo base_url(); ?>guest/logging_in">
                         <div class="form-user">
                             <label for="email"><b>E-mail</b></label>
                             <input type="text" placeholder="Enter E-mail" name="email" size="20" required>

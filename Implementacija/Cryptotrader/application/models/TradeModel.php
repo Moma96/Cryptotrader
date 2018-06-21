@@ -67,6 +67,9 @@ class TradeModel extends CI_Model {
             $this->accept_all($transactions, $email, $amount);
             $accepted = $amount;
         }
+        if ($accepted > 0){
+            $this->CryptocurrModel->update_price($cryptoId, $pricePU);
+        }
         $this->pay_fee($amount*$pricePU, $email, 'usdt');
         $rest = $amount - $accepted;
         return "Accepted $accepted ".strtoupper($cryptoId)." and added bid with ".$rest." ".strtoupper($cryptoId)."!";
@@ -108,6 +111,9 @@ class TradeModel extends CI_Model {
         } else {
             $this->accept_all($transactions, $email, $amount);
             $accepted = $amount;
+        }
+        if ($accepted > 0){
+            $this->CryptocurrModel->update_price($cryptoId, $pricePU);
         }
         $this->pay_fee($amount, $email, $cryptoId);
         $rest = $amount - $accepted;

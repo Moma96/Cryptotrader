@@ -35,12 +35,12 @@ class Cryptotrader extends CI_Controller {
         try{
             if ($this->input->post('cryptoId1')) {
                 if ($this->CryptocurrModel->check($this->input->post('cryptoId1'))) {
-                    $this->session->set_userdata('cryptoId1', $this->input->post('cryptoId1'));
+                    $this->session->set_userdata('cryptoId1', trim($this->input->post('cryptoId1')));
                 }
             }
             if ($this->input->post('cryptoId2')) {
                 if ($this->CryptocurrModel->check($this->input->post('cryptoId2'))) {
-                    $this->session->set_userdata('cryptoId2', $this->input->post('cryptoId2')); 
+                    $this->session->set_userdata('cryptoId2', trim($this->input->post('cryptoId2'))); 
                 }
             }
             $cryptodata = array(

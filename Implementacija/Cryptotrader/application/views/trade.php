@@ -25,19 +25,21 @@
                         <div class="trade-currency">
                             <?php echo $cryptodata['name']; ?> - <?php echo strtoupper($cryptodata['cryptoId1']); ?>
                         </div>
-                        <button onclick="firstCurrency()" class="currency-switch">
-                            <svg class="arr-down-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 9.602 5.922" style="enable-background:new 0 0 9.602 5.922;" xml:space="preserve">
-                                <g>
-                                    <path class="arr-down-icon" d="M9.602,1.121L8.481,0l-3.68,3.68L1.122,0L0,1.121l4.801,4.801L9.602,1.121z M9.602,1.121"/>
-                                </g>
-                            </svg>
-                        </button>
-                        <div id="currency-search-first" class="currency-search-1">
-                            <form method="post" action="<?php echo base_url(); ?>trade">
-                                <input type="text" name="cryptoId1" class="currency-search-input-first" placeholder="Search...">
-                                <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
-                            </form>
+                        <div class="currency-switch-box-first">
+                            <button onclick="firstCurrency()" class="currency-switch">
+                                <svg class="arr-down-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 9.602 5.922" style="enable-background:new 0 0 9.602 5.922;" xml:space="preserve">
+                                    <g>
+                                        <path class="arr-down-icon" d="M9.602,1.121L8.481,0l-3.68,3.68L1.122,0L0,1.121l4.801,4.801L9.602,1.121z M9.602,1.121"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div id="currency-search-first" class="currency-search-1">
+                                <form method="post" action="<?php echo base_url(); ?>trade">
+                                    <input type="text" name="cryptoId1" class="currency-search-input-first" placeholder="Search...">
+                                    <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
+                                </form>
+                            </div>
                         </div>
                     </div>
                         
@@ -48,41 +50,48 @@
                                     CURRENT VALUE
                                 </div>
                                 <div class="value">
-                                    <span class="change-value-text value-text current-value-text">$7.152,00</span>
+                                    <span class="change-value-text value-text current-value-text"><?php echo strtoupper($cryptodata['price']); ?></span>
                                 </div>
                             </div>
                             <div class="change">
                                 <div class="stats-text">
-                                    24 HOUR CHANGE
+                                    <?php echo strtoupper($cryptodata['type']); ?> CHANGE
                                 </div>
                                 <div class="value">
-                                    <span class="change-value-text value-text">+22.25%</span>
-                                    <img id="change-value-arr" src="images/arrow-up.png">
+                                    <?php $change = $cryptodata['chartdata']['change'];
+                                        if ($cryptodata['chartdata']['change'] >= 0) {
+                                            echo "<span class=\"change-value-positive value-text\">+$change%</span>".
+                                                 "<img id=\"change-value-arr\" src=\"images/arrow-up.png\">";
+                                        } else {
+                                            echo "<span class=\"change-value-negative value-text\">$change%</span>".
+                                                 "<img id=\"change-value-arr\" src=\"images/arrow-down.png\">";
+                                        }
+                                    ?>
                                 </div>
                             </div>
                             <div class="change">
                                 <div class="stats-text">
-                                    24 HOUR VOLUME
+                                    <?php echo strtoupper($cryptodata['type']); ?> VOLUME
                                 </div>
                                 <div class="value">
-                                    <span class="value-text">295.722... BTC</span>
+                                    <span class="value-text">295.722... USDT</span>
                                 </div>
                             </div>
                             <div class="change">
                                 <div class="stats-text">
-                                    24 HOUR VOLUME
+                                    <?php echo strtoupper($cryptodata['type']); ?> LOW
                                 </div>
                                 <div class="value">
-                                    <span class="value-text">$9,186</span>
+                                    <span class="value-text"><?php echo $cryptodata['chartdata']['low']; ?></span>
                                     <img id="low-value-arr" src="images/arrow-down.png">
                                 </div>
                             </div>
                             <div class="change">
                                 <div class="stats-text">
-                                    24 HOUR HIGH
+                                    <?php echo strtoupper($cryptodata['type']); ?> HIGH
                                 </div>
                                 <div class="value">
-                                    <span class="value-text">$9,360</span>
+                                    <span class="value-text"><?php echo $cryptodata['chartdata']['high']; ?></span>
                                     <img id="change-value-arr" src="images/arrow-up.png">
                                 </div>
                             </div>

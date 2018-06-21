@@ -278,8 +278,16 @@ body {
      color: #3ce057;
 }
 
+.change-value-positive{
+     color: #3ce057;
+}
+
+.change-value-negative{
+     color: #ea3636;
+}
+
 .chart{
-    width:100%;
+    width: 100%;
     height: 400px;
 }
 

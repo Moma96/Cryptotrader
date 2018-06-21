@@ -111,8 +111,9 @@ class PriceModel extends CI_Model {
         $min = min($chartdata['prices']);
         $chartdata['max'] = ($max == 0)? 1 : $max + ($max - $min)/4;
         $chartdata['min'] = $min - ($max - $min)/4;
-        $chartdata['high'] = $max;
-        $chartdata['low'] = $min;
+        $chartdata['high'] = bcdiv($max, 1, 7 - strlen(bcdiv($max, 1, 0)));
+        $chartdata['low'] = bcdiv($min, 1, 7 - strlen(bcdiv($min, 1, 0)));
+        $chartdata['change'] = ($chartdata['prices'][0]==0? 0 : bcdiv(($chartdata['prices'][count($chartdata['prices']) - 1]/$chartdata['prices'][0] - 1)*100, 1, 3));
         if ($chartdata['min'] < 0) { $chartdata['min'] = 0; }
         $chartdata['stepSize'] = ($chartdata['max'] - $chartdata['min'])/10;
         return $chartdata;
@@ -130,7 +131,6 @@ class PriceModel extends CI_Model {
     public function add($cryptoId, $newprice) {
         $now = date('Y-m-d H:i:s');
         $latest = $this->get_latest($cryptoId);
-        
         if (!$latest || strtotime($now) - strtotime($latest->time) > $this->frequency) {
             $this->add_price($cryptoId, $now, $newprice);
         } else {

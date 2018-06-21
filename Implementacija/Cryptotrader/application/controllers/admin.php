@@ -56,8 +56,8 @@ class Admin extends CI_Controller {
             $this->form_validation->set_rules('add-id', 'Add-id', 'required');
             $this->form_validation->set_rules('add-currency', 'Add-currency', 'required');
             if($this->form_validation->run()){
-                $id = $this->input->post('add-id');
-                $name = $this->input->post('add-currency');
+                $id = trim($this->input->post('add-id'));
+                $name = trim($this->input->post('add-currency'));
                 try{
                     $success = $this->CryptocurrModel->add_currency($id, $name);
                     $this->session->set_flashdata('success', $success);
@@ -87,8 +87,8 @@ class Admin extends CI_Controller {
             $this->form_validation->set_rules('remove-id', 'Remove-id', 'required');
             $this->form_validation->set_rules('remove-currency', 'Remove-currency', 'required');
             if($this->form_validation->run()){
-                $id = $this->input->post('remove-id');
-                $name = $this->input->post('remove-currency');
+                $id = trim($this->input->post('remove-id'));
+                $name = trim($this->input->post('remove-currency'));
                 try{
                     $success = $this->CryptocurrModel->delete_currency($id, $name);
                     $this->session->set_flashdata('success', $success);

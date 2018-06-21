@@ -21,6 +21,7 @@ class Trade extends CI_Controller {
         $this->load->model('WalletModel');
         $this->load->model('TransactionModel');
         $this->load->model('TradeModel');
+        $this->load->model('PriceModel');
     }
 
     /**
@@ -37,6 +38,9 @@ class Trade extends CI_Controller {
                         $this->session->set_userdata('cryptoId1', $this->input->post('cryptoId1'));
                     }
                 }
+                if ($this->session->userdata('cryptoId1') == 'usdt') {
+                    $this->session->set_userdata('cryptoId1', 'btc');
+                }
                 $userdata = array(
                     'name' => $this->UserModel->get_name(),
                     'surname' => $this->UserModel->get_surname(),
@@ -47,7 +51,9 @@ class Trade extends CI_Controller {
                 $cryptodata = array(
                     'cryptoId1' => $this->session->userdata('cryptoId1'),
                     'name' => $this->CryptocurrModel->get_currency($this->session->userdata('cryptoId1'))->name,
-                    'price' => $this->CryptocurrModel->get_price($this->session->userdata('cryptoId1'))
+                    'price' => $this->CryptocurrModel->get_price($this->session->userdata('cryptoId1')),
+                    'chartdata' => $this->PriceModel->get_chart_data($this->session->userdata('cryptoId1'), 'usdt', '1y'),
+                    'type' => '1y'
                 );
                 $transactiondata = array(
                     'asks' => $this->TransactionModel->get('ask', $this->session->userdata('cryptoId1'), $this->session->userdata('email'), null),

@@ -48,19 +48,26 @@
         <div class="changes-container">
             <div class="change">
                 <div class="stats-text">
-                    24 HOUR CHANGE
+                    <?php echo strtoupper($cryptodata['type']); ?> CHANGE
                 </div>
                 <div class="value">
-                    <span class="change-value-text value-text">+22.25%</span>
-                    <img id="change-value-arr" src="images/arrow-up.png">
+                    <?php $change = $cryptodata['chartdata']['change'];
+                        if ($cryptodata['chartdata']['change'] >= 0) {
+                            echo "<span class=\"change-value-positive value-text\">+$change%</span>".
+                                 "<img id=\"change-value-arr\" src=\"images/arrow-up.png\">";
+                        } else {
+                            echo "<span class=\"change-value-negative value-text\">$change%</span>".
+                                 "<img id=\"change-value-arr\" src=\"images/arrow-down.png\">";
+                        }
+                    ?>
                 </div>
             </div>
             <div class="change">
                 <div class="stats-text">
-                    24 HOUR VOLUME
+                    <?php echo strtoupper($cryptodata['type']); ?> VOLUME
                 </div>
                 <div class="value">
-                    <span class="value-text">295.722... BTC</span>
+                    <span class="value-text">295.722... USDT</span>
                 </div>
             </div>
             <div class="change">
@@ -68,7 +75,7 @@
                     <?php echo strtoupper($cryptodata['type']); ?> LOW
                 </div>
                 <div class="value">
-                    <span class="value-text"><?php echo strtoupper($cryptodata['chartdata']['low']); ?></span>
+                    <span class="value-text"><?php echo $cryptodata['chartdata']['low']; ?></span>
                     <img id="low-value-arr" src="images/arrow-down.png">
                 </div>
             </div>
@@ -77,7 +84,7 @@
                     <?php echo strtoupper($cryptodata['type']); ?> HIGH
                 </div>
                 <div class="value">
-                    <span class="value-text"><?php echo strtoupper($cryptodata['chartdata']['high']); ?></span>
+                    <span class="value-text"><?php echo $cryptodata['chartdata']['high']; ?></span>
                     <img id="change-value-arr" src="images/arrow-up.png">
                 </div>
             </div>

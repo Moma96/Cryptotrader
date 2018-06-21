@@ -35,7 +35,6 @@ class TransactionModel extends CI_Model {
     */
     public function accept($email, $transaction, $amount) {
         $this->update_transaction($transaction, $transaction->availAmount - $amount);
-        $this->CryptocurrModel->update_price($transaction->cryptoId, $transaction->pricePU);
         
         $totalPrice = $transaction->pricePU*$amount;
         

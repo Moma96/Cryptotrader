@@ -46,7 +46,7 @@
                     <div class="sponsored-box">
                         <span class="sponsored-txt">SPONSORED</span>
                     </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
                 
@@ -59,8 +59,8 @@
         <script src="js/Chart.min.js"></script>
         <script src="js/custom.js"></script>
         <script>
-			createChart(<?php echo json_encode($cryptodata['chartdata']); ?>);
-			closeLogin();
-		</script>
+                createChart(<?php echo json_encode($cryptodata['chartdata']); ?>);
+                closeLogin();
+        </script>
     </body>
 </html>

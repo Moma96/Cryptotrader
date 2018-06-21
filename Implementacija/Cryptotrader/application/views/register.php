@@ -16,7 +16,7 @@
                 <?php include('flashdata.php'); ?>
                 
                 <div class="col-md-12 white-background register-form-container">
-                    <form class="register-form" method="post" action="<?php echo base_url(); ?>register">
+                    <form class="register-form" method="post" action="<?php echo base_url(); ?>guest/registering">
                         <div class="container">
                             <h1>Sign Up</h1>
                             <p>Please fill in this form to create an account.</p>
